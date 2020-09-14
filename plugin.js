@@ -331,7 +331,7 @@ tinymce.PluginManager.add('dropzone', function(editor, url) {
         }
       }
       dialog.close();
-    }
+    };
     
     let iframes = document.querySelectorAll('iframe');
     let iframe = iframes[iframes.length - 1];

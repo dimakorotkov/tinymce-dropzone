@@ -1,6 +1,6 @@
 {
   "name": "@dimakorotkov/tinymce-dropzone",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin using Dropzone library for drag’n’drop file uploads with image previews",
   "main": "plugin.js",
   "scripts": {
