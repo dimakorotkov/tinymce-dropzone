@@ -1,0 +1,23 @@
+{
+  "name": "@dimakorotkov/tinymce-dropzone",
+  "version": "1.0.0",
+  "description": "Plugin using Dropzone library for drag’n’drop file uploads with image previews",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimakorotkov/tinymce-dropzone.git"
+  },
+  "keywords": [
+    "tinymce",
+    "dropzone"
+  ],
+  "author": "Dmitriy Korotkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dimakorotkov/tinymce-dropzone/issues"
+  },
+  "homepage": "https://github.com/dimakorotkov/tinymce-dropzone#readme"
+}
