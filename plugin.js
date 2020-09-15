@@ -116,7 +116,7 @@ tinymce.PluginManager.add('dropzone', function(editor, url) {
           }\
           \
           .dropzone .dz-preview {\
-            margin: .74em;\
+            margin: 10px;\
           }\
           \
           .dz-image img {\
