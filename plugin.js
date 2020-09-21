@@ -241,7 +241,7 @@ tinymce.PluginManager.add('dropzone', function(editor, url) {
                 file["_imageLink"].addEventListener("click",\
                   () => {\
                     window.tinymceEditor.insertContent(\'<img src="\' + downloadUrl + \'">\');\
-                    window.tinymceDialog.close();\
+                    window.tinymceSubmit();\
                   }\
                 );\
                 file["previewElement"].appendChild(file["_imageLink"]);\
