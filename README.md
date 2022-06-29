@@ -5,7 +5,7 @@
 
 This plugin uses [Dropzone](https://www.dropzonejs.com) library for drag’n’drop file uploads with image previews.
 
-This plugin is compatible with TinyMCE 5 and Dropzone 5.
+This plugin is compatible with TinyMCE 5/6 and Dropzone 5.
 
 ## Install
 

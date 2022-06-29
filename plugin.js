@@ -1,69 +1,70 @@
 tinymce.PluginManager.add('dropzone', function(editor, url) {
 
   // plugin configuration options
+  let settings = editor.getParam('dropzone');
   let dropzoneAction = null;
-  if (editor.settings.dropzone && editor.settings.dropzone.action) {
-    dropzoneAction = editor.settings.dropzone.action;
+  if (settings && settings.action) {
+    dropzoneAction = settings.action;
   }
 
   let dropzoneScripts = [];
-  if (editor.settings.dropzone && editor.settings.dropzone.js) {
-    dropzoneScripts.push(editor.settings.dropzone.js);
+  if (settings && settings.js) {
+    dropzoneScripts.push(settings.js);
   }
 
   let dropzoneStyles = [];
-  if (editor.settings.dropzone && editor.settings.dropzone.css) {
-    dropzoneStyles.push(editor.settings.dropzone.css);
+  if (settings && settings.css) {
+    dropzoneStyles.push(settings.css);
   }
 
   let dropzoneTitle = tinymce.util.I18n.translate('Files');
-  if (editor.settings.dropzone && editor.settings.dropzone.title) {
-    dropzoneTitle = editor.settings.dropzone.title;
+  if (settings && settings.title) {
+    dropzoneTitle = settings.title;
   }
 
   let dropzoneFiles = [];
-  if (editor.settings.dropzone && editor.settings.dropzone.files) {
-    dropzoneFiles = editor.settings.dropzone.files;
+  if (settings && settings.files) {
+    dropzoneFiles = settings.files;
   }
 
   let dropzoneConfig = {};
-  if (editor.settings.dropzone && editor.settings.dropzone.config) {
-    dropzoneConfig = editor.settings.dropzone.config;
+  if (settings && settings.config) {
+    dropzoneConfig = settings.config;
   }
 
   let dropzoneIcon = 'upload';
-  if (editor.settings.dropzone && editor.settings.dropzone.icon) {
-    dropzoneIcon = editor.settings.dropzone.icon;
+  if (settings && settings.icon) {
+    dropzoneIcon = settings.icon;
   }
 
   let dropzoneOkTitle = tinymce.util.I18n.translate('OK');
-  if (editor.settings.dropzone && editor.settings.dropzone.okTitle) {
-    dropzoneOkTitle = editor.settings.dropzone.okTitle;
+  if (settings && settings.okTitle) {
+    dropzoneOkTitle = settings.okTitle;
   }
 
   let dropzoneRemoveTooltip = tinymce.util.I18n.translate('Remove');
-  if (editor.settings.dropzone && editor.settings.dropzone.removeTooltip) {
-    dropzoneRemoveTooltip = editor.settings.dropzone.removeTooltip;
+  if (settings && settings.removeTooltip) {
+    dropzoneRemoveTooltip = settings.removeTooltip;
   }
 
   let dropzoneDownloadTooltip = tinymce.util.I18n.translate('Download');
-  if (editor.settings.dropzone && editor.settings.dropzone.downloadTooltip) {
-    dropzoneDownloadTooltip = editor.settings.dropzone.downloadTooltip;
+  if (settings && settings.downloadTooltip) {
+    dropzoneDownloadTooltip = settings.downloadTooltip;
   }
 
   let dropzoneInsertLinkTooltip = tinymce.util.I18n.translate('Insert link');
-  if (editor.settings.dropzone && editor.settings.dropzone.insertLinkTooltip) {
-    dropzoneInsertLinkTooltip = editor.settings.dropzone.insertLinkTooltip;
+  if (settings && settings.insertLinkTooltip) {
+    dropzoneInsertLinkTooltip = settings.insertLinkTooltip;
   }
 
   let dropzoneInsertImageTooltip = tinymce.util.I18n.translate('Insert image');
-  if (editor.settings.dropzone && editor.settings.dropzone.insertImageTooltip) {
-    dropzoneInsertImageTooltip = editor.settings.dropzone.insertImageTooltip;
+  if (settings && settings.insertImageTooltip) {
+    dropzoneInsertImageTooltip = settings.insertImageTooltip;
   }
 
   let dropzoneRemoveConfirmation = tinymce.util.I18n.translate('Links to the file will be corrupted.');
-  if (editor.settings.dropzone && editor.settings.dropzone.removeConfirmation) {
-    dropzoneRemoveConfirmation = editor.settings.dropzone.removeConfirmation;
+  if (settings && settings.removeConfirmation) {
+    dropzoneRemoveConfirmation = settings.removeConfirmation;
   }
 
   // add button to tinimce
@@ -324,10 +325,10 @@ tinymce.PluginManager.add('dropzone', function(editor, url) {
     });
 
     let submit = function() {
-      if (editor.settings.dropzone && editor.settings.dropzone.files) {
-        editor.settings.dropzone.files.splice(0, editor.settings.dropzone.files.length);
+      if (settings && settings.files) {
+        settings.files.splice(0, settings.files.length);
         for (let i = 0; i < resultFiles.length; i++) {
-          editor.settings.dropzone.files.push(resultFiles[i]);
+          settings.files.push(resultFiles[i]);
         }
       }
       dialog.close();
